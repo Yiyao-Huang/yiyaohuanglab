@@ -423,7 +423,11 @@ export default function App() {
           <div className="mt-16 rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm md:p-8">
             <div className="grid gap-8 md:grid-cols-[280px_1fr]">
               <div className="flex flex-col items-center text-center md:items-start md:text-left">
-                <PhotoBox src={piProfile.photo} alt={piProfile.name} label="PI photo" className="h-48 w-48 rounded-[2rem]" />
+                <img
+  src={`${import.meta.env.BASE_URL}images/pi.jpg`}
+  alt="Yiyao Huang"
+  className="h-48 w-48 rounded-[2rem] border border-blue-100 object-cover shadow-sm"
+/>
                 <h3 className="mt-5 text-xl font-semibold">{piProfile.name}</h3>
                 <p className="mt-1 text-sm font-medium text-blue-700">{piProfile.role}</p>
               </div>
