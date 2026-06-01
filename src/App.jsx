@@ -126,7 +126,7 @@ const piProfile = {
     "Research experience in extracellular vesicles, CNS biomarkers, EV RNA biology, and infection-associated EV remodeling",
   ],
   appointments: [
-    "Zhongshan School of Medicine, Sun Yat-sen University",
+    "Associate Professor, Zhongshan School of Medicine, Sun Yat-sen University",
     "Member-at-Large, International Society for Extracellular Vesicles",
     "Member, ISEV Solid Tissue EVs Task Force",
     "Secretary, Chinese Society for Extracellular Vesicles",
