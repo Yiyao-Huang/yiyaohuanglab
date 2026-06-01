@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -15,40 +15,6 @@ import {
   UserPlus,
   BriefcaseBusiness,
 } from "lucide-react";
-
-function cn(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
-function Card({ className = "", children, ...props }) {
-  return (
-    <div className={cn("border", className)} {...props}>
-      {children}
-    </div>
-  );
-}
-
-function CardContent({ className = "", children, ...props }) {
-  return (
-    <div className={className} {...props}>
-      {children}
-    </div>
-  );
-}
-
-function Button({ variant = "default", className = "", children, ...props }) {
-  const base = "inline-flex items-center justify-center font-medium transition focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2";
-  const variants = {
-    default: "bg-blue-700 text-white hover:bg-blue-800",
-    outline: "border border-slate-300 bg-transparent hover:bg-slate-100",
-  };
-
-  return (
-    <button className={cn(base, variants[variant] || variants.default, className)} {...props}>
-      {children}
-    </button>
-  );
-}
 
 const googleScholarUrl = "https://scholar.google.com/citations?hl=zh-CN&user=tDDb3YcAAAAJ";
 
@@ -117,7 +83,6 @@ const publications = [
 const piProfile = {
   name: "黄依瑶 / Yiyao Huang, MD, PhD",
   role: "Principal Investigator",
-  photo: "./images/pi.jpg",
   summary:
     "Dr. Yiyao Huang leads a translational extracellular vesicle biology lab focused on EV-associated non-coding RNAs, liquid biopsy, neurodegenerative diseases, and HIV-associated EV biology.",
   training: [
@@ -138,13 +103,13 @@ const team = [
     name: "石芷鸢 / Zhiyuan Shi",
     role: "PhD Student",
     note: "BSc: Huazhong Agricultural University · MSc: Sun Yat-sen University",
-    photo: "./images/zhiyuan-shi.jpg",
+    photo: "/images/zhiyuan-shi.jpg",
   },
   {
     name: "胡凝语 / Ningyu Hu",
     role: "Master’s Student",
     note: "BSc: Jinan University",
-    photo: "./images/ningyu-hu.jpg",
+    photo: "/images/ningyu-hu.jpg",
   },
 ];
 
@@ -167,25 +132,8 @@ const openings = [
   },
 ];
 
-function PhotoBox({ src, alt, label, className = "" }) {
-  const [failed, setFailed] = useState(false);
-
-  if (src && !failed) {
-    return (
-      <div className={cn("overflow-hidden border border-blue-100 bg-gradient-to-br from-blue-50 via-cyan-50 to-violet-50", className)}>
-        <img src={src} alt={alt} className="h-full w-full object-cover" onError={() => setFailed(true)} />
-      </div>
-    );
-  }
-
-  return (
-    <div className={cn("grid place-items-center overflow-hidden border border-blue-100 bg-gradient-to-br from-blue-50 via-cyan-50 to-violet-50", className)}>
-      <div className="text-center">
-        <Users className="mx-auto h-14 w-14 text-blue-700" />
-        <p className="mt-3 text-sm font-medium text-slate-500">{label}</p>
-      </div>
-    </div>
-  );
+function Card({ className = "", children }) {
+  return <div className={`rounded-3xl border border-slate-200 bg-white shadow-sm ${className}`}>{children}</div>;
 }
 
 function HivIcon({ className = "" }) {
@@ -204,6 +152,17 @@ function HivIcon({ className = "" }) {
       <circle cx="51" cy="13" r="3" fill="currentColor" />
       <circle cx="13" cy="51" r="3" fill="currentColor" />
     </svg>
+  );
+}
+
+function PhotoPlaceholder({ label = "Photo", size = "h-40 w-40" }) {
+  return (
+    <div className={`grid ${size} place-items-center overflow-hidden rounded-[2rem] border border-slate-100 bg-gradient-to-br from-slate-100 via-blue-50 to-cyan-50`}>
+      <div className="text-center">
+        <Users className="mx-auto h-11 w-11 text-blue-700" />
+        <p className="mt-3 text-sm font-medium text-slate-500">{label}</p>
+      </div>
+    </div>
   );
 }
 
@@ -244,7 +203,6 @@ const researchStyles = [
 
 function ResearchHeaderVisual({ index }) {
   const style = researchStyles[index] || researchStyles[0];
-
   return (
     <div className={`relative mb-6 h-28 overflow-hidden rounded-3xl bg-gradient-to-br ${style.visual}`}>
       <div className="absolute -right-6 -top-8 h-28 w-28 rounded-full bg-white/30" />
@@ -296,16 +254,15 @@ function CosmicEvArtwork() {
       <div className="absolute -left-10 top-10 h-40 w-40 rounded-full bg-fuchsia-500/20 blur-3xl" />
       <div className="absolute right-0 top-0 h-48 w-48 rounded-full bg-cyan-400/20 blur-3xl" />
       <div className="absolute bottom-0 left-1/3 h-52 w-52 rounded-full bg-violet-500/20 blur-3xl" />
+      <div className="absolute left-1/2 top-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan-300/20" />
+      <div className="absolute left-1/2 top-1/2 h-[230px] w-[230px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-fuchsia-300/20" />
+      <div className="absolute left-1/2 top-1/2 h-[170px] w-[170px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-violet-300/20" />
       <div className="absolute left-10 top-10 h-1.5 w-1.5 rounded-full bg-white/80" />
       <div className="absolute left-20 top-28 h-1 w-1 rounded-full bg-cyan-200" />
       <div className="absolute right-16 top-20 h-1.5 w-1.5 rounded-full bg-fuchsia-200" />
       <div className="absolute right-24 top-36 h-1 w-1 rounded-full bg-white/70" />
       <div className="absolute left-24 bottom-24 h-1.5 w-1.5 rounded-full bg-violet-200" />
       <div className="absolute right-10 bottom-20 h-1 w-1 rounded-full bg-cyan-100" />
-      <div className="absolute right-32 bottom-10 h-1.5 w-1.5 rounded-full bg-white/70" />
-      <div className="absolute left-1/2 top-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan-300/20" />
-      <div className="absolute left-1/2 top-1/2 h-[230px] w-[230px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-fuchsia-300/20" />
-      <div className="absolute left-1/2 top-1/2 h-[170px] w-[170px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-violet-300/20" />
       <div className="absolute left-1/2 top-1/2 flex h-36 w-36 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-[10px] border-cyan-300 bg-white/95 shadow-[0_0_40px_rgba(34,211,238,0.25)]">
         <div className="relative h-20 w-20 rounded-full bg-gradient-to-br from-cyan-100 via-violet-100 to-fuchsia-100">
           <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -384,20 +341,14 @@ export default function App() {
             <p className="mt-6 max-w-2xl text-base leading-8 text-slate-200 md:text-lg">
               We study extracellular vesicles as a dynamic information layer connecting cellular states, peripheral biofluid signals, and disease mechanisms. Our work integrates EV separation, liquid biopsy, single-vesicle analysis, multi-omics, and functional validation in neurodegenerative diseases and HIV.
             </p>
-           <div className="mt-7 flex flex-wrap gap-4">
-  <a
-    href="#research"
-    className="inline-flex items-center rounded-2xl bg-white px-6 py-4 text-base font-semibold text-slate-950 shadow-sm transition hover:bg-slate-100"
-  >
-    Explore Research <ArrowRight className="ml-2 h-4 w-4" />
-  </a>
-  <a
-    href="#join"
-    className="inline-flex items-center rounded-2xl border border-white/30 bg-transparent px-6 py-4 text-base font-semibold text-white transition hover:bg-white/10"
-  >
-    Join the Lab
-  </a>
-</div>
+            <div className="mt-7 flex flex-wrap gap-4">
+              <a href="#research" className="inline-flex min-w-[250px] items-center justify-center rounded-2xl bg-white px-6 py-4 text-base font-semibold text-slate-950 shadow-sm transition hover:bg-slate-100">
+                Explore Research <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+              <a href="#join" className="inline-flex min-w-[250px] items-center justify-center rounded-2xl bg-white px-6 py-4 text-base font-semibold text-slate-950 shadow-sm transition hover:bg-slate-100">
+                Join the Lab
+              </a>
+            </div>
           </motion.div>
           <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.15 }} className="flex items-center justify-center">
             <CosmicEvArtwork />
@@ -425,7 +376,7 @@ export default function App() {
           <div className="mt-16 rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm md:p-8">
             <div className="grid gap-8 md:grid-cols-[280px_1fr]">
               <div className="flex flex-col items-center text-center md:items-start md:text-left">
-                <PhotoBox src={piProfile.photo} alt={piProfile.name} label="PI photo" className="h-48 w-48 rounded-[2rem]" />
+                <PhotoPlaceholder label="PI photo" size="h-48 w-48" />
                 <h3 className="mt-5 text-xl font-semibold">{piProfile.name}</h3>
                 <p className="mt-1 text-sm font-medium text-blue-700">{piProfile.role}</p>
               </div>
@@ -438,7 +389,10 @@ export default function App() {
                     </div>
                     <ul className="space-y-3 text-sm leading-6 text-slate-700">
                       {piProfile.training.map((item) => (
-                        <li key={item} className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-500" /><span>{item}</span></li>
+                        <li key={item} className="flex gap-2">
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-500" />
+                          <span>{item}</span>
+                        </li>
                       ))}
                     </ul>
                   </div>
@@ -448,7 +402,10 @@ export default function App() {
                     </div>
                     <ul className="space-y-3 text-sm leading-6 text-slate-700">
                       {piProfile.appointments.map((item) => (
-                        <li key={item} className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-500" /><span>{item}</span></li>
+                        <li key={item} className="flex gap-2">
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-500" />
+                          <span>{item}</span>
+                        </li>
                       ))}
                     </ul>
                   </div>
@@ -465,20 +422,24 @@ export default function App() {
                 <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">Research</p>
                 <h2 className="mt-3 text-4xl font-semibold tracking-tight">Research directions</h2>
               </div>
-              <p className="hidden max-w-md text-sm leading-6 text-slate-600 md:block">We prioritize questions where EV biology can provide source information, mechanistic insight, and clinically relevant readouts.</p>
+              <p className="hidden max-w-md text-sm leading-6 text-slate-600 md:block">
+                We prioritize questions where EV biology can provide source information, mechanistic insight, and clinically relevant readouts.
+              </p>
             </div>
             <div className="grid gap-6 md:grid-cols-2">
               {researchAreas.map((area, index) => {
                 const style = researchStyles[index] || researchStyles[0];
                 return (
-                  <Card key={area.title} className={`rounded-3xl shadow-sm transition hover:-translate-y-1 hover:shadow-md ${style.card}`}>
-                    <CardContent className="p-6">
+                  <Card key={area.title} className={`transition hover:-translate-y-1 hover:shadow-md ${style.card}`}>
+                    <div className="p-6">
                       <ResearchHeaderVisual index={index} />
-                      <div className={`mb-4 grid h-12 w-12 place-items-center rounded-2xl ${style.icon}`}><ResearchIcon index={index} /></div>
+                      <div className={`mb-4 grid h-12 w-12 place-items-center rounded-2xl ${style.icon}`}>
+                        <ResearchIcon index={index} />
+                      </div>
                       <p className={`mb-2 text-sm font-semibold ${style.label}`}>0{index + 1}</p>
                       <h3 className="text-2xl font-semibold tracking-tight">{area.title}</h3>
                       <p className="mt-4 leading-7 text-slate-600">{area.text}</p>
-                    </CardContent>
+                    </div>
                   </Card>
                 );
               })}
@@ -491,15 +452,15 @@ export default function App() {
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">People</p>
             <h2 className="mt-3 text-4xl font-semibold tracking-tight">Team</h2>
           </div>
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {team.map((person) => (
-              <Card key={person.name} className="rounded-3xl border-slate-200 bg-white shadow-sm">
-                <CardContent className="p-6">
-                  <PhotoBox src={person.photo} alt={person.name} label="Photo coming soon" className="mb-5 aspect-[4/3] w-full rounded-3xl" />
-                  <h3 className="text-xl font-semibold leading-snug">{person.name}</h3>
+              <Card key={person.name}>
+                <div className="p-6">
+                  <PhotoPlaceholder label="Photo" size="h-40 w-40" />
+                  <h3 className="mt-5 text-xl font-semibold leading-snug">{person.name}</h3>
                   <p className="mt-1 text-sm font-medium text-blue-700">{person.role}</p>
                   <p className="mt-4 text-sm leading-6 text-slate-600">{person.note}</p>
-                </CardContent>
+                </div>
               </Card>
             ))}
           </div>
@@ -512,14 +473,18 @@ export default function App() {
                 <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-200">Publications</p>
                 <h2 className="mt-3 text-4xl font-semibold tracking-tight">Selected publications</h2>
               </div>
-              <a href={googleScholarUrl} target="_blank" rel="noreferrer">
-                <Button variant="outline" className="rounded-2xl border-white/30 bg-transparent text-white hover:bg-white/10">View Google Scholar <ExternalLink className="ml-2 h-4 w-4" /></Button>
+              <a href={googleScholarUrl} target="_blank" rel="noreferrer" className="inline-flex w-fit items-center rounded-2xl border border-white/30 bg-transparent px-6 py-4 text-base font-semibold text-white transition hover:bg-white/10">
+                View Google Scholar <ExternalLink className="ml-2 h-4 w-4" />
               </a>
             </div>
             <div className="space-y-4">
               {publications.map((paper) => (
                 <a key={paper.title} href={paper.url} target="_blank" rel="noreferrer" className="block rounded-3xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-0.5 hover:bg-white/10">
-                  <div className="flex flex-wrap items-center gap-3 text-sm text-cyan-100"><span>{paper.journal}</span><span className="h-1 w-1 rounded-full bg-cyan-200" /><span>{paper.year}</span></div>
+                  <div className="flex flex-wrap items-center gap-3 text-sm text-cyan-100">
+                    <span>{paper.journal}</span>
+                    <span className="h-1 w-1 rounded-full bg-cyan-200" />
+                    <span>{paper.year}</span>
+                  </div>
                   <h3 className="mt-3 text-xl font-semibold leading-7">{paper.title}</h3>
                   <p className="mt-3 text-sm leading-6 text-slate-300">{paper.authors}</p>
                   <p className="mt-2 text-sm font-medium text-cyan-100">{paper.citation}</p>
@@ -534,19 +499,23 @@ export default function App() {
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">Join us</p>
               <h2 className="mt-3 text-4xl font-semibold tracking-tight">We are recruiting motivated trainees and early-career researchers.</h2>
-              <p className="mt-5 leading-7 text-slate-600">We welcome applicants interested in extracellular vesicles, liquid biopsy, neurodegenerative diseases, RNA biology, bioinformatics, and HIV-related research.</p>
-              <a href="mailto:huangyy639@mail.sysu.edu.cn"><Button className="mt-6 rounded-2xl px-6 py-6">Contact about opportunities <Mail className="ml-2 h-4 w-4" /></Button></a>
+              <p className="mt-5 leading-7 text-slate-600">
+                We welcome applicants interested in extracellular vesicles, liquid biopsy, neurodegenerative diseases, RNA biology, bioinformatics, and HIV-related research.
+              </p>
+              <a href="mailto:huangyy639@mail.sysu.edu.cn" className="mt-6 inline-flex items-center rounded-2xl bg-slate-950 px-6 py-4 text-base font-semibold text-white transition hover:bg-slate-800">
+                Contact about opportunities <Mail className="ml-2 h-4 w-4" />
+              </a>
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
               {openings.map((item, index) => (
-                <Card key={item.title} className="rounded-3xl border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-                  <CardContent className="p-6">
+                <Card key={item.title} className="transition hover:-translate-y-1 hover:shadow-md">
+                  <div className="p-6">
                     <div className="mb-4 grid h-11 w-11 place-items-center rounded-2xl bg-blue-50 text-blue-700">
                       {index === 0 ? <FlaskConical className="h-5 w-5" /> : index === 1 ? <UserPlus className="h-5 w-5" /> : <GraduationCap className="h-5 w-5" />}
                     </div>
                     <h3 className="text-lg font-semibold text-slate-900">{item.title}</h3>
                     <p className="mt-3 text-sm leading-6 text-slate-600">{item.text}</p>
-                  </CardContent>
+                  </div>
                 </Card>
               ))}
             </div>
@@ -560,18 +529,29 @@ export default function App() {
                 <div>
                   <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">Contact</p>
                   <h2 className="mt-3 text-4xl font-semibold tracking-tight">Get in touch</h2>
-                  <p className="mt-5 leading-7 text-slate-600">For collaboration, training, or recruitment inquiries, please contact the lab by email.</p>
+                  <p className="mt-5 leading-7 text-slate-600">
+                    For collaboration, training, or recruitment inquiries, please contact the lab by email.
+                  </p>
                 </div>
                 <div className="space-y-4 text-slate-700">
-                  <div className="flex flex-col gap-2 rounded-2xl bg-white p-4 sm:flex-row sm:items-center sm:gap-3"><Mail className="h-5 w-5 text-blue-700" /><span>huangyy639@mail.sysu.edu.cn · yiyaohuang141@gmail.com</span></div>
-                  <div className="flex flex-col gap-2 rounded-2xl bg-white p-4 sm:flex-row sm:items-center sm:gap-3"><MapPin className="h-5 w-5 text-blue-700" /><span>Zhongshan School of Medicine, Sun Yat-sen University (Shenzhen Campus), Shenzhen, China</span></div>
+                  <div className="flex flex-col gap-2 rounded-2xl bg-white p-4 sm:flex-row sm:items-center sm:gap-3">
+                    <Mail className="h-5 w-5 text-blue-700" />
+                    <span>huangyy639@mail.sysu.edu.cn · yiyaohuang141@gmail.com</span>
+                  </div>
+                  <div className="flex flex-col gap-2 rounded-2xl bg-white p-4 sm:flex-row sm:items-center sm:gap-3">
+                    <MapPin className="h-5 w-5 text-blue-700" />
+                    <span>Zhongshan School of Medicine, Sun Yat-sen University (Shenzhen Campus), Shenzhen, China</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
       </main>
-      <footer className="border-t border-slate-200 bg-white px-6 py-8 text-center text-sm text-slate-500">© 2026 Yiyao Huang Lab. Zhongshan School of Medicine, Sun Yat-sen University. All rights reserved.</footer>
+
+      <footer className="border-t border-slate-200 bg-white px-6 py-8 text-center text-sm text-slate-500">
+        © 2026 Yiyao Huang Lab. Zhongshan School of Medicine, Sun Yat-sen University. All rights reserved.
+      </footer>
     </div>
   );
 }
