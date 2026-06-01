@@ -1,6 +1,8 @@
 # Yiyao Huang Lab Website
 
-This is a Vite + React + Tailwind single-page lab website.
+Official lab website: https://yiyao-huang.github.io/yiyao-huang-lab/
+
+This repository contains the source code for the Yiyao Huang Lab website.
 
 ## Local preview
 
