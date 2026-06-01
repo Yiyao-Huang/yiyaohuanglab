@@ -117,7 +117,7 @@ const publications = [
 const piProfile = {
   name: "黄依瑶 / Yiyao Huang, MD, PhD",
   role: "Principal Investigator",
-  photo: "./images/pi.jpg",
+photo: `${import.meta.env.BASE_URL}images/pi.jpg`,
   summary:
     "Dr. Yiyao Huang leads a translational extracellular vesicle biology lab focused on EV-associated non-coding RNAs, liquid biopsy, neurodegenerative diseases, and HIV-associated EV biology.",
   training: [
