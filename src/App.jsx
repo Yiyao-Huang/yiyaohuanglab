@@ -134,7 +134,8 @@ const team = [
   {
     name: "石芷鸢 / Zhiyuan Shi",
     role: "PhD Student",
-    note: "BSc: Huazhong Agricultural University · MSc: Sun Yat-sen University",
+    note: "BSc: Huazhong Agricultural University · 
+      MSc: Sun Yat-sen University",
     photo: `${import.meta.env.BASE_URL}images/zhiyuan-shi.jpg`,
   },
   {
@@ -599,12 +600,12 @@ export default function App() {
           <div className="mt-16 rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm md:p-8">
             <div className="grid gap-8 md:grid-cols-[280px_1fr]">
               <div className="flex flex-col items-center text-center md:items-start md:text-left">
-                <PhotoBox
-                  src={piProfile.photo}
-                  alt={piProfile.name}
-                  label="PI photo"
-                  className="h-48 w-48 rounded-[2rem]"
-                />
+             <PhotoBox
+  src={person.photo}
+  alt={person.name}
+  label="Photo"
+  className="mb-5 h-64 w-48 rounded-[2rem]"
+/>
                 <h3 className="mt-5 text-xl font-semibold">{piProfile.name}</h3>
                 <p className="mt-1 text-sm font-medium text-blue-700">{piProfile.role}</p>
               </div>
