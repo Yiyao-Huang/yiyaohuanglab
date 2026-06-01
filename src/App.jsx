@@ -602,10 +602,10 @@ export default function App() {
             <div className="grid gap-8 md:grid-cols-[280px_1fr]">
               <div className="flex flex-col items-center text-center md:items-start md:text-left">
              <PhotoBox
-  src={person.photo}
-  alt={person.name}
-  label="Photo"
-  className="mb-5 h-64 w-48 rounded-[2rem]"
+  src={piProfile.photo}
+  alt={piProfile.name}
+  label="PI photo"
+  className="h-48 w-48 rounded-[2rem]"
 />
                 <h3 className="mt-5 text-xl font-semibold">{piProfile.name}</h3>
                 <p className="mt-1 text-sm font-medium text-blue-700">{piProfile.role}</p>
@@ -698,11 +698,11 @@ export default function App() {
               <Card key={person.name} className="rounded-3xl border-slate-200 bg-white shadow-sm">
                 <CardContent className="p-6">
                   <PhotoBox
-                    src={person.photo}
-                    alt={person.name}
-                    label="Photo"
-                    className="mb-5 h-48 w-48 rounded-[2rem]"
-                  />
+  src={person.photo}
+  alt={person.name}
+  label="Photo"
+  className="mb-5 h-64 w-48 rounded-[2rem]"
+/>
                   <h3 className="text-xl font-semibold leading-snug">{person.name}</h3>
                   <p className="mt-1 text-sm font-medium text-blue-700">{person.role}</p>
                   <div className="mt-4 space-y-1 text-sm leading-6 text-slate-600">
