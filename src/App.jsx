@@ -384,18 +384,20 @@ export default function App() {
             <p className="mt-6 max-w-2xl text-base leading-8 text-slate-200 md:text-lg">
               We study extracellular vesicles as a dynamic information layer connecting cellular states, peripheral biofluid signals, and disease mechanisms. Our work integrates EV separation, liquid biopsy, single-vesicle analysis, multi-omics, and functional validation in neurodegenerative diseases and HIV.
             </p>
-            <div className="mt-7 flex flex-wrap gap-4">
-              <a href="#research">
-                <Button className="rounded-2xl bg-white px-6 py-6 text-slate-950 hover:bg-slate-100">
-                  Explore Research <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </a>
-              <a href="#join">
-                <Button variant="outline" className="rounded-2xl border-white/30 bg-transparent px-6 py-6 text-white hover:bg-white/10">
-                  Join the Lab
-                </Button>
-              </a>
-            </div>
+           <div className="mt-7 flex flex-wrap gap-4">
+  <a
+    href="#research"
+    className="inline-flex items-center rounded-2xl bg-white px-6 py-4 text-base font-semibold text-slate-950 shadow-sm transition hover:bg-slate-100"
+  >
+    Explore Research <ArrowRight className="ml-2 h-4 w-4" />
+  </a>
+  <a
+    href="#join"
+    className="inline-flex items-center rounded-2xl border border-white/30 bg-transparent px-6 py-4 text-base font-semibold text-white transition hover:bg-white/10"
+  >
+    Join the Lab
+  </a>
+</div>
           </motion.div>
           <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.15 }} className="flex items-center justify-center">
             <CosmicEvArtwork />
