@@ -97,7 +97,9 @@ const publications = [
     authors:
       "Huang, Y.; Abdelgawad, A.; Turchinovich, A.; Queen, S.; Abreu, C. M.; Zhu, X.; Batish, M.; Zheng, L.; Witwer, K. W.",
     citation: "The Journal of Infectious Diseases, 2024, 229(5): 1295–1305",
-    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11095537/",
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11095537
+        
+        /",
   },
   {
     journal: "Interdisciplinary Medicine",
@@ -107,7 +109,9 @@ const publications = [
     authors:
       "Huang, Y.*; Arab, T.*; Russell, A. E.; Mallick, E. R.; Nagaraj, R.; Gizzie, E.; Redding, J.; Troncoso, J. C.; Pletniková, O.; Turchinovich, A.; Routenberg, D. A.; Witwer, K. W.",
     citation: "Interdisciplinary Medicine, 2023, 1(4), e20230016",
-    url: "https://onlinelibrary.wiley.com/doi/10.1002/inmd.20230016",
+    url: "https://onlinelibrary.wiley.com/doi/10.1002/inmd.20230016
+        
+        ",
   },
 ];
 
@@ -309,72 +313,93 @@ function ResearchHeaderVisual({ index }) {
 
 function CosmicEvArtwork() {
   return (
-    <div className="relative h-[460px] w-full max-w-lg overflow-hidden rounded-[2rem] border border-white/20 bg-white/10 p-5 shadow-2xl backdrop-blur">
-      <div className="absolute inset-0 rounded-[2rem] bg-[radial-gradient(circle_at_50%_45%,rgba(34,211,238,0.30),rgba(15,23,42,0.95)_45%,rgba(2,6,23,1)_100%)]" />
+    <div className="relative h-[480px] w-full max-w-lg overflow-hidden rounded-[2rem] border border-white/20 bg-white/10 p-5 shadow-2xl backdrop-blur">
+      <div className="absolute inset-0 rounded-[2rem] bg-[radial-gradient(circle_at_50%_45%,rgba(56,189,248,0.20),rgba(15,23,42,0.95)_48%,rgba(2,6,23,1)_100%)]" />
 
-      <div className="absolute left-1/2 top-1/2 h-[330px] w-[330px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan-200/15" />
-      <div className="absolute left-1/2 top-1/2 h-[245px] w-[245px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-violet-200/15" />
-      <div className="absolute left-1/2 top-1/2 h-[165px] w-[165px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-fuchsia-200/15" />
+      {/* subtle top title */}
+      <div className="absolute left-1/2 top-6 -translate-x-1/2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-100 backdrop-blur">
+        EV universe
+      </div>
 
-      <div className="absolute left-[18%] top-[18%] h-1.5 w-1.5 rounded-full bg-white/80" />
-      <div className="absolute right-[20%] top-[22%] h-1 w-1 rounded-full bg-cyan-200" />
-      <div className="absolute left-[30%] bottom-[18%] h-1 w-1 rounded-full bg-violet-200" />
-      <div className="absolute right-[26%] bottom-[24%] h-1.5 w-1.5 rounded-full bg-white/70" />
+      {/* orbit rings */}
+      <div className="absolute left-1/2 top-1/2 h-[340px] w-[340px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan-200/15" />
+      <div className="absolute left-1/2 top-1/2 h-[250px] w-[250px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-blue-200/10" />
 
-      <div className="absolute left-1/2 top-1/2 grid h-40 w-40 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-[10px] border-cyan-200/80 bg-white shadow-[0_0_60px_rgba(34,211,238,0.35)]">
-        <div className="relative h-24 w-24 rounded-full bg-gradient-to-br from-cyan-50 via-violet-50 to-fuchsia-50">
+      {/* center EV */}
+      <div className="absolute left-1/2 top-1/2 grid h-44 w-44 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-[10px] border-cyan-100/80 bg-white shadow-[0_0_70px_rgba(125,211,252,0.35)]">
+        <div className="relative h-28 w-28 rounded-full bg-gradient-to-br from-slate-100 via-violet-50 to-cyan-50">
           <svg
             viewBox="0 0 100 100"
             className="absolute inset-0 h-full w-full"
             fill="none"
           >
+            {/* abstract contents */}
             <path
-              d="M18 55C30 30 45 70 58 45C66 30 75 46 84 38"
+              d="M18 56C30 36 42 72 56 47C65 31 75 49 84 39"
               stroke="#7C3AED"
-              strokeWidth="3.5"
+              strokeWidth="4"
               strokeLinecap="round"
             />
             <path
-              d="M20 40C34 54 45 25 58 42C70 58 76 31 84 52"
-              stroke="#06B6D4"
-              strokeWidth="3.5"
+              d="M20 42C34 56 44 28 58 43C69 56 77 33 84 53"
+              stroke="#0891B2"
+              strokeWidth="4"
               strokeLinecap="round"
             />
-            <circle cx="30" cy="28" r="4" fill="#EC4899" />
-            <circle cx="68" cy="68" r="5" fill="#14B8A6" />
-            <circle cx="66" cy="28" r="3.5" fill="#F59E0B" />
+            <circle cx="30" cy="28" r="5" fill="#EC4899" />
+            <circle cx="66" cy="72" r="6" fill="#14B8A6" />
+            <circle cx="71" cy="30" r="4.5" fill="#F59E0B" />
           </svg>
         </div>
       </div>
 
-      <div className="absolute left-[17%] top-[34%] rounded-2xl border border-white/10 bg-white/10 px-4 py-3 text-white backdrop-blur">
-        <Brain className="mb-2 h-7 w-7 text-violet-200" />
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-100">
-          Brain
-        </p>
+      {/* top node: contents */}
+      <div className="absolute left-1/2 top-[16%] -translate-x-1/2">
+        <div className="grid h-14 w-14 place-items-center rounded-2xl border border-white/15 bg-white/10 text-violet-200 shadow-lg backdrop-blur">
+          <Sparkles className="h-7 w-7" />
+        </div>
       </div>
 
-      <div className="absolute right-[14%] top-[34%] rounded-2xl border border-white/10 bg-white/10 px-4 py-3 text-white backdrop-blur">
-        <Dna className="mb-2 h-7 w-7 text-amber-200" />
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-100">
-          RNA
-        </p>
+      {/* right node: source specificity / tracing */}
+      <div className="absolute right-[12%] top-1/2 -translate-y-1/2">
+        <div className="grid h-14 w-14 place-items-center rounded-2xl border border-white/15 bg-white/10 text-cyan-200 shadow-lg backdrop-blur">
+          <CircleDotDashed className="h-7 w-7" />
+        </div>
       </div>
 
-      <div className="absolute bottom-[18%] left-1/2 -translate-x-1/2 rounded-2xl border border-white/10 bg-white/10 px-4 py-3 text-white backdrop-blur">
-        <HivIcon className="mx-auto mb-2 h-8 w-8 text-rose-200" />
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-rose-100">
-          Virus
-        </p>
+      {/* bottom node: liquid biopsy */}
+      <div className="absolute left-1/2 bottom-[12%] -translate-x-1/2">
+        <div className="grid h-14 w-14 place-items-center rounded-2xl border border-white/15 bg-white/10 text-emerald-200 shadow-lg backdrop-blur">
+          <FlaskConical className="h-7 w-7" />
+        </div>
       </div>
 
-      <div className="absolute left-[39%] top-[23%] h-4 w-4 rounded-full border-2 border-cyan-200 bg-cyan-200/20" />
-      <div className="absolute right-[32%] top-[58%] h-3 w-3 rounded-full border-2 border-fuchsia-200 bg-fuchsia-200/20" />
-      <div className="absolute left-[29%] bottom-[34%] h-5 w-5 rounded-full border-2 border-violet-200 bg-violet-200/20" />
+      {/* left node: EV heterogeneity / single vesicle feel */}
+      <div className="absolute left-[12%] top-1/2 -translate-y-1/2">
+        <div className="relative grid h-14 w-14 place-items-center rounded-2xl border border-white/15 bg-white/10 shadow-lg backdrop-blur">
+          <div className="absolute h-4 w-4 rounded-full border-2 border-fuchsia-200 bg-fuchsia-200/10" />
+          <div className="absolute left-3 top-3 h-2.5 w-2.5 rounded-full bg-cyan-200/80" />
+          <div className="absolute right-3 top-4 h-2 w-2 rounded-full bg-violet-200/80" />
+          <div className="absolute bottom-3 left-4 h-2 w-2 rounded-full bg-amber-200/80" />
+        </div>
+      </div>
+
+      {/* orbit markers */}
+      <div className="absolute left-1/2 top-[24%] h-3 w-3 -translate-x-1/2 rounded-full border-2 border-cyan-200 bg-cyan-200/10" />
+      <div className="absolute right-[24%] top-1/2 h-3 w-3 -translate-y-1/2 rounded-full border-2 border-violet-200 bg-violet-200/10" />
+      <div className="absolute left-1/2 bottom-[24%] h-3 w-3 -translate-x-1/2 rounded-full border-2 border-emerald-200 bg-emerald-200/10" />
+      <div className="absolute left-[24%] top-1/2 h-3 w-3 -translate-y-1/2 rounded-full border-2 border-fuchsia-200 bg-fuchsia-200/10" />
+
+      {/* background particles */}
+      <div className="absolute left-[12%] top-[20%] h-2.5 w-2.5 rounded-full bg-white/80" />
+      <div className="absolute right-[14%] top-[22%] h-2 w-2 rounded-full bg-cyan-200" />
+      <div className="absolute left-[24%] bottom-[18%] h-2 w-2 rounded-full bg-violet-200" />
+      <div className="absolute right-[20%] bottom-[16%] h-3 w-3 rounded-full bg-white/70" />
+      <div className="absolute left-[36%] top-[18%] h-5 w-5 rounded-full border-2 border-cyan-200/70 bg-cyan-200/10" />
+      <div className="absolute right-[32%] bottom-[28%] h-4 w-4 rounded-full border-2 border-fuchsia-200/70 bg-fuchsia-200/10" />
     </div>
   );
 }
-
 export default function App() {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
@@ -511,10 +536,7 @@ export default function App() {
               </div>
 
               <div>
-                <p className="text-lg leading-8 text-slate-700">
-                  {piProfile.summary}
-                </p>
-                <div className="mt-6 grid gap-6 md:grid-cols-2">
+  <div className="grid gap-6 md:grid-cols-2">
                   <div className="rounded-3xl bg-slate-50 p-5">
                     <div className="mb-3 flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] text-blue-700">
                       <GraduationCap className="h-4 w-4" /> Training
