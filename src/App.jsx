@@ -67,19 +67,7 @@ const publications = [
     authors:
       "Huang, Y.; Abdelgawad, A.; Gololobova, O.; Liao, Z.; Cong, X.; Batish, M.; Zheng, L.; Witwer, K. W.",
     citation: "Science Advances, 2025, 11(11), eadq6557",
-    url: "https://www.science.org/doi/10.1126/sciadv.adq6557
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        ",
+    url: "https://www.science.org/doi/10.1126/sciadv.adq6557",
   },
   {
     journal: "Aging Cell",
@@ -89,19 +77,7 @@ const publications = [
     authors:
       "Huang, Y.*; Feng, J.*; Xu, J.; Dong, L.; Su, W.; Li, B.; Witwer, K. W.; Zheng, L.",
     citation: "Aging Cell, 2025 Jan; 24(1): e14356",
-    url: "https://onlinelibrary.wiley.com/doi/10.1111/acel.14356
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        ",
+    url: "https://onlinelibrary.wiley.com/doi/10.1111/acel.14356",
   },
   {
     journal: "Journal of Extracellular Biology",
@@ -111,19 +87,7 @@ const publications = [
     authors:
       "Sagar, R.*; Huang, Y.*; Dong, D.; Boyd, R. J.; Ahmed, W.; Witwer, K. W.; Mahairaki, V.",
     citation: "Journal of Extracellular Biology, 2025, 4(8), e70074",
-    url: "https://isevjournals.onlinelibrary.wiley.com/doi/10.1002/jex2.70074
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        ",
+    url: "https://isevjournals.onlinelibrary.wiley.com/doi/10.1002/jex2.70074",
   },
   {
     journal: "The Journal of Infectious Diseases",
@@ -133,19 +97,7 @@ const publications = [
     authors:
       "Huang, Y.; Abdelgawad, A.; Turchinovich, A.; Queen, S.; Abreu, C. M.; Zhu, X.; Batish, M.; Zheng, L.; Witwer, K. W.",
     citation: "The Journal of Infectious Diseases, 2024, 229(5): 1295–1305",
-    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11095537
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        /",
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11095537/",
   },
   {
     journal: "Interdisciplinary Medicine",
@@ -155,19 +107,7 @@ const publications = [
     authors:
       "Huang, Y.*; Arab, T.*; Russell, A. E.; Mallick, E. R.; Nagaraj, R.; Gizzie, E.; Redding, J.; Troncoso, J. C.; Pletniková, O.; Turchinovich, A.; Routenberg, D. A.; Witwer, K. W.",
     citation: "Interdisciplinary Medicine, 2023, 1(4), e20230016",
-    url: "https://onlinelibrary.wiley.com/doi/10.1002/inmd.20230016
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        ",
+    url: "https://onlinelibrary.wiley.com/doi/10.1002/inmd.20230016",
   },
 ];
 
@@ -180,7 +120,7 @@ const piProfile = {
   training: [
     "MD, PhD, Southern Medical University",
     "Postdoctoral training, Johns Hopkins University School of Medicine",
-    "Research experience in extracellular vesicles, tissue-derived EVs, CNS disease biomarkers, RNA biology,
+    "Research experience in extracellular vesicles, tissue-derived EVs, CNS disease biomarkers, and RNA biology",
   ],
   appointments: [
     "Associate Professor, Zhongshan School of Medicine, Sun Yat-sen University",
@@ -189,6 +129,7 @@ const piProfile = {
     "Early Career Member and Secretary, Chinese Society for Extracellular Vesicles",
   ],
 };
+
 const team = [
   {
     name: "石芷鸢 / Zhiyuan Shi",
@@ -337,7 +278,9 @@ function ResearchHeaderVisual({ index }) {
   const labels = ["RNA cargo", "EV subtypes", "NDD biomarkers", "HIV & EVs"];
 
   return (
-    <div className={`relative mb-6 h-28 overflow-hidden rounded-3xl bg-gradient-to-br ${style.visual}`}>
+    <div
+      className={`relative mb-6 h-28 overflow-hidden rounded-3xl bg-gradient-to-br ${style.visual}`}
+    >
       <div className="absolute inset-0 bg-white/5" />
       <div className="absolute -right-10 -top-12 h-32 w-32 rounded-full bg-white/25" />
       <div className="absolute -bottom-10 left-10 h-28 w-28 rounded-full bg-white/20" />
@@ -347,7 +290,9 @@ function ResearchHeaderVisual({ index }) {
       </div>
 
       <div className="absolute bottom-6 left-28">
-        <p className="text-sm font-semibold text-white drop-shadow-sm">{labels[index]}</p>
+        <p className="text-sm font-semibold text-white drop-shadow-sm">
+          {labels[index]}
+        </p>
         <div className="mt-2 flex gap-2">
           <span className="h-2.5 w-2.5 rounded-full bg-white/90" />
           <span className="h-2.5 w-6 rounded-full bg-white/60" />
@@ -378,7 +323,11 @@ function CosmicEvArtwork() {
 
       <div className="absolute left-1/2 top-1/2 grid h-40 w-40 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-[10px] border-cyan-200/80 bg-white shadow-[0_0_60px_rgba(34,211,238,0.35)]">
         <div className="relative h-24 w-24 rounded-full bg-gradient-to-br from-cyan-50 via-violet-50 to-fuchsia-50">
-          <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full" fill="none">
+          <svg
+            viewBox="0 0 100 100"
+            className="absolute inset-0 h-full w-full"
+            fill="none"
+          >
             <path
               d="M18 55C30 30 45 70 58 45C66 30 75 46 84 38"
               stroke="#7C3AED"
@@ -400,17 +349,23 @@ function CosmicEvArtwork() {
 
       <div className="absolute left-[17%] top-[34%] rounded-2xl border border-white/10 bg-white/10 px-4 py-3 text-white backdrop-blur">
         <Brain className="mb-2 h-7 w-7 text-violet-200" />
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-100">Brain</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-100">
+          Brain
+        </p>
       </div>
 
       <div className="absolute right-[14%] top-[34%] rounded-2xl border border-white/10 bg-white/10 px-4 py-3 text-white backdrop-blur">
         <Dna className="mb-2 h-7 w-7 text-amber-200" />
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-100">RNA</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-100">
+          RNA
+        </p>
       </div>
 
       <div className="absolute bottom-[18%] left-1/2 -translate-x-1/2 rounded-2xl border border-white/10 bg-white/10 px-4 py-3 text-white backdrop-blur">
         <HivIcon className="mx-auto mb-2 h-8 w-8 text-rose-200" />
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-rose-100">Virus</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-rose-100">
+          Virus
+        </p>
       </div>
 
       <div className="absolute left-[39%] top-[23%] h-4 w-4 rounded-full border-2 border-cyan-200 bg-cyan-200/20" />
@@ -426,7 +381,9 @@ export default function App() {
       <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <div>
-            <p className="text-lg font-semibold tracking-tight">Yiyao Huang Lab</p>
+            <p className="text-lg font-semibold tracking-tight">
+              Yiyao Huang Lab
+            </p>
             <p className="text-xs uppercase tracking-[0.25em] text-slate-500">
               Extracellular Vesicles · Liquid Biopsy · NDDs · HIV
             </p>
@@ -464,16 +421,19 @@ export default function App() {
           >
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm text-blue-100">
               <Sparkles className="h-4 w-4" />
-              Extracellular vesicles, liquid biopsy, neurodegenerative diseases, and HIV
+              Extracellular vesicles, liquid biopsy, neurodegenerative diseases,
+              and HIV
             </div>
             <h1 className="max-w-4xl text-3xl font-semibold leading-tight tracking-tight md:text-4xl lg:text-5xl">
-              Decoding extracellular vesicle signals for liquid biopsy in neurodegenerative diseases and HIV
+              Decoding extracellular vesicle signals for liquid biopsy in
+              neurodegenerative diseases and HIV
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-8 text-slate-200 md:text-lg">
-              We study extracellular vesicles as a dynamic information layer connecting cellular states,
-              peripheral biofluid signals, and disease mechanisms. Our work integrates EV separation,
-              liquid biopsy, single-vesicle analysis, multi-omics, and functional validation in
-              neurodegenerative diseases and HIV.
+              We study extracellular vesicles as a dynamic information layer
+              connecting cellular states, peripheral biofluid signals, and
+              disease mechanisms. Our work integrates EV separation, liquid
+              biopsy, single-vesicle analysis, multi-omics, and functional
+              validation in neurodegenerative diseases and HIV.
             </p>
             <div className="mt-7 flex flex-wrap gap-4">
               <a
@@ -510,22 +470,25 @@ export default function App() {
                 About the lab
               </p>
               <h2 className="mt-3 text-4xl font-semibold tracking-tight">
-                A translational EV biology lab decoding disease-relevant signals in peripheral biofluids.
+                A translational EV biology lab decoding disease-relevant signals
+                in peripheral biofluids.
               </h2>
             </div>
             <div className="space-y-5 text-lg leading-8 text-slate-700">
               <p>
-  The Yiyao Huang Lab is a young and growing research group at Zhongshan School of Medicine (Shenzhen),
-  Sun Yat-sen University. We study extracellular vesicles, non-coding RNAs, and liquid biopsy
-  to understand how molecular signals move from tissues and cells into
-  peripheral biofluids.
+                The Yiyao Huang Lab is a young and growing research group at
+                Zhongshan School of Medicine (Shenzhen), Sun Yat-sen University.
+                We study extracellular vesicles, non-coding RNAs, and liquid
+                biopsy to understand how molecular signals move from tissues and
+                cells into peripheral biofluids.
               </p>
               <p>
-  We are especially interested in neurodegenerative diseases, including Alzheimer’s disease
-  and Parkinson’s disease, as well as HIV-associated EV biology. As a new lab, we value
-  thoughtful questions, rigorous experiments, transparent data analysis, and open discussion.
-  We welcome trainees and collaborators who bring fresh ideas and are excited to build new
-  directions together.
+                We are especially interested in neurodegenerative diseases,
+                including Alzheimer’s disease and Parkinson’s disease, as well as
+                HIV-associated EV biology. As a new lab, we value thoughtful
+                questions, rigorous experiments, transparent data analysis, and
+                open discussion. We welcome trainees and collaborators who bring
+                fresh ideas and are excited to build new directions together.
               </p>
             </div>
           </div>
@@ -533,18 +496,24 @@ export default function App() {
           <div className="mt-16 rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm md:p-8">
             <div className="grid gap-8 md:grid-cols-[280px_1fr]">
               <div className="flex flex-col items-center text-center md:items-start md:text-left">
-             <PhotoBox
-  src={piProfile.photo}
-  alt={piProfile.name}
-  label="PI photo"
-  className="h-48 w-48 rounded-[2rem]"
-/>
-                <h3 className="mt-5 text-xl font-semibold">{piProfile.name}</h3>
-                <p className="mt-1 text-sm font-medium text-blue-700">{piProfile.role}</p>
+                <PhotoBox
+                  src={piProfile.photo}
+                  alt={piProfile.name}
+                  label="PI photo"
+                  className="h-48 w-48 rounded-[2rem]"
+                />
+                <h3 className="mt-5 text-xl font-semibold">
+                  {piProfile.name}
+                </h3>
+                <p className="mt-1 text-sm font-medium text-blue-700">
+                  {piProfile.role}
+                </p>
               </div>
 
               <div>
-                <p className="text-lg leading-8 text-slate-700">{piProfile.summary}</p>
+                <p className="text-lg leading-8 text-slate-700">
+                  {piProfile.summary}
+                </p>
                 <div className="mt-6 grid gap-6 md:grid-cols-2">
                   <div className="rounded-3xl bg-slate-50 p-5">
                     <div className="mb-3 flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] text-blue-700">
@@ -562,7 +531,8 @@ export default function App() {
 
                   <div className="rounded-3xl bg-slate-50 p-5">
                     <div className="mb-3 flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] text-blue-700">
-                      <BriefcaseBusiness className="h-4 w-4" /> Appointments & service
+                      <BriefcaseBusiness className="h-4 w-4" /> Appointments &
+                      service
                     </div>
                     <ul className="space-y-3 text-sm leading-6 text-slate-700">
                       {piProfile.appointments.map((item) => (
@@ -586,11 +556,14 @@ export default function App() {
                 <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">
                   Research
                 </p>
-                <h2 className="mt-3 text-4xl font-semibold tracking-tight">Research directions</h2>
+                <h2 className="mt-3 text-4xl font-semibold tracking-tight">
+                  Research directions
+                </h2>
               </div>
               <p className="hidden max-w-md text-sm leading-6 text-slate-600 md:block">
-                We prioritize questions where EV biology can provide source information, mechanistic
-                insight, and clinically relevant readouts.
+                We prioritize questions where EV biology can provide source
+                information, mechanistic insight, and clinically relevant
+                readouts.
               </p>
             </div>
 
@@ -605,12 +578,22 @@ export default function App() {
                   >
                     <CardContent className="p-6">
                       <ResearchHeaderVisual index={index} />
-                      <div className={`mb-4 grid h-12 w-12 place-items-center rounded-2xl ${style.icon}`}>
+                      <div
+                        className={`mb-4 grid h-12 w-12 place-items-center rounded-2xl ${style.icon}`}
+                      >
                         <ResearchIcon index={index} />
                       </div>
-                      <p className={`mb-2 text-sm font-semibold ${style.label}`}>0{index + 1}</p>
-                      <h3 className="text-2xl font-semibold tracking-tight">{area.title}</h3>
-                      <p className="mt-4 leading-7 text-slate-600">{area.text}</p>
+                      <p
+                        className={`mb-2 text-sm font-semibold ${style.label}`}
+                      >
+                        0{index + 1}
+                      </p>
+                      <h3 className="text-2xl font-semibold tracking-tight">
+                        {area.title}
+                      </h3>
+                      <p className="mt-4 leading-7 text-slate-600">
+                        {area.text}
+                      </p>
                     </CardContent>
                   </Card>
                 );
@@ -621,29 +604,38 @@ export default function App() {
 
         <section id="people" className="mx-auto max-w-7xl px-6 py-20">
           <div className="mb-10">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">People</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">
+              People
+            </p>
             <h2 className="mt-3 text-4xl font-semibold tracking-tight">Team</h2>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {team.map((person) => (
-              <Card key={person.name} className="rounded-3xl border-slate-200 bg-white shadow-sm">
+              <Card
+                key={person.name}
+                className="rounded-3xl border-slate-200 bg-white shadow-sm"
+              >
                 <CardContent className="p-6">
                   <PhotoBox
-  src={person.photo}
-  alt={person.name}
-  label="Photo"
-  className="mb-5 h-64 w-48 rounded-[2rem]"
-/>
-                  <h3 className="text-xl font-semibold leading-snug">{person.name}</h3>
-                  <p className="mt-1 text-sm font-medium text-blue-700">{person.role}</p>
+                    src={person.photo}
+                    alt={person.name}
+                    label="Photo"
+                    className="mb-5 h-64 w-48 rounded-[2rem]"
+                  />
+                  <h3 className="text-xl font-semibold leading-snug">
+                    {person.name}
+                  </h3>
+                  <p className="mt-1 text-sm font-medium text-blue-700">
+                    {person.role}
+                  </p>
                   <div className="mt-4 space-y-1 text-sm leading-6 text-slate-600">
-  {Array.isArray(person.note) ? (
-    person.note.map((item) => <p key={item}>{item}</p>)
-  ) : (
-    <p>{person.note}</p>
-  )}
-</div>
+                    {Array.isArray(person.note) ? (
+                      person.note.map((item) => <p key={item}>{item}</p>)
+                    ) : (
+                      <p>{person.note}</p>
+                    )}
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -657,7 +649,9 @@ export default function App() {
                 <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-200">
                   Publications
                 </p>
-                <h2 className="mt-3 text-4xl font-semibold tracking-tight">Selected publications</h2>
+                <h2 className="mt-3 text-4xl font-semibold tracking-tight">
+                  Selected publications
+                </h2>
               </div>
               <a
                 href={googleScholarUrl}
@@ -683,9 +677,15 @@ export default function App() {
                     <span className="h-1 w-1 rounded-full bg-cyan-200" />
                     <span>{paper.year}</span>
                   </div>
-                  <h3 className="mt-3 text-xl font-semibold leading-7">{paper.title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-slate-300">{paper.authors}</p>
-                  <p className="mt-2 text-sm font-medium text-cyan-100">{paper.citation}</p>
+                  <h3 className="mt-3 text-xl font-semibold leading-7">
+                    {paper.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-6 text-slate-300">
+                    {paper.authors}
+                  </p>
+                  <p className="mt-2 text-sm font-medium text-cyan-100">
+                    {paper.citation}
+                  </p>
                 </a>
               ))}
             </div>
@@ -699,12 +699,14 @@ export default function App() {
                 Join us
               </p>
               <h2 className="mt-3 text-4xl font-semibold tracking-tight">
-                We are recruiting motivated trainees and early-career researchers.
+                We are recruiting motivated trainees and early-career
+                researchers.
               </h2>
               <p className="mt-5 leading-7 text-slate-600">
-              As a young and growing lab, we welcome people who are curious, careful, and open to
-new ideas. Applicants with interests in extracellular vesicles, liquid biopsy,
-or bioinformatics are encouraged to contact us.
+                As a young and growing lab, we welcome people who are curious,
+                careful, and open to new ideas. Applicants with interests in
+                extracellular vesicles, liquid biopsy, or bioinformatics are
+                encouraged to contact us.
               </p>
               <a
                 href="mailto:huangyy639@mail.sysu.edu.cn"
@@ -730,8 +732,12 @@ or bioinformatics are encouraged to contact us.
                         <GraduationCap className="h-5 w-5" />
                       )}
                     </div>
-                    <h3 className="text-lg font-semibold text-slate-900">{item.title}</h3>
-                    <p className="mt-3 text-sm leading-6 text-slate-600">{item.text}</p>
+                    <h3 className="text-lg font-semibold text-slate-900">
+                      {item.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-6 text-slate-600">
+                      {item.text}
+                    </p>
                   </CardContent>
                 </Card>
               ))}
@@ -747,22 +753,26 @@ or bioinformatics are encouraged to contact us.
                   <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">
                     Contact
                   </p>
-                  <h2 className="mt-3 text-4xl font-semibold tracking-tight">Get in touch</h2>
+                  <h2 className="mt-3 text-4xl font-semibold tracking-tight">
+                    Get in touch
+                  </h2>
                   <p className="mt-5 leading-7 text-slate-600">
-                    For collaboration, training, or recruitment inquiries, please contact the lab by
-                    email.
+                    For collaboration, training, or recruitment inquiries,
+                    please contact the lab by email.
                   </p>
                 </div>
                 <div className="space-y-4 text-slate-700">
                   <div className="flex flex-col gap-2 rounded-2xl bg-white p-4 sm:flex-row sm:items-center sm:gap-3">
                     <Mail className="h-5 w-5 text-blue-700" />
-                    <span>huangyy639@mail.sysu.edu.cn · yiyaohuang141@gmail.com</span>
+                    <span>
+                      huangyy639@mail.sysu.edu.cn · yiyaohuang141@gmail.com
+                    </span>
                   </div>
                   <div className="flex flex-col gap-2 rounded-2xl bg-white p-4 sm:flex-row sm:items-center sm:gap-3">
                     <MapPin className="h-5 w-5 text-blue-700" />
                     <span>
-                      Zhongshan School of Medicine, Sun Yat-sen University (Shenzhen Campus),
-                      Shenzhen, China
+                      Zhongshan School of Medicine, Sun Yat-sen University
+                      (Shenzhen Campus), Shenzhen, China
                     </span>
                   </div>
                 </div>
@@ -773,8 +783,8 @@ or bioinformatics are encouraged to contact us.
       </main>
 
       <footer className="border-t border-slate-200 bg-white px-6 py-8 text-center text-sm text-slate-500">
-        © 2026 Yiyao Huang Lab. Zhongshan School of Medicine, Sun Yat-sen University. All rights
-        reserved.
+        © 2026 Yiyao Huang Lab. Zhongshan School of Medicine (Shenzhen), Sun Yat-sen
+        University. All rights reserved.
       </footer>
     </div>
   );
