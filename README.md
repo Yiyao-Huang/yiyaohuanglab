@@ -1,6 +1,6 @@
 # Yiyao Huang Lab Website
 
-Official lab website: https://yiyao-huang.github.io/yiyaohuang_lab_website/
+Official lab website: https://yiyao-huang.github.io/yiyaohuanglab/
 
 This repository contains the source code for the Yiyao Huang Lab website.
 
