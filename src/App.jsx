@@ -441,14 +441,14 @@ export default function App() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="max-w-4xl text-3xl font-semibold leading-tight tracking-tight md:text-4xl lg:text-5xl">
-              Decoding extracellular vesicle signals for liquid biopsy in diseases
+              Decoding extracellular vesicle signals for liquid biopsy
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-8 text-slate-200 md:text-lg">
-              We study extracellular vesicles as a dynamic information layer
+              We study extracellular vesicles as a dynamic information carrier
               connecting cellular states, peripheral biofluid signals, and
               disease mechanisms. Our work integrates EV separation, liquid
               biopsy, single-vesicle analysis, multi-omics, and functional
-              validation in neurodegenerative diseases and HIV.
+              validation in different diseases, including neurodegenerative diseases and HIV.
             </p>
             <div className="mt-7 flex flex-wrap gap-4">
               <a
