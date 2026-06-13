@@ -67,7 +67,19 @@ const publications = [
     authors:
       "Huang, Y.; Abdelgawad, A.; Gololobova, O.; Liao, Z.; Cong, X.; Batish, M.; Zheng, L.; Witwer, K. W.",
     citation: "Science Advances, 2025, 11(11), eadq6557",
-    url: "https://www.science.org/doi/10.1126/sciadv.adq6557",
+    url: "https://www.science.org/doi/10.1126/sciadv.adq6557
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        ",
   },
   {
     journal: "Aging Cell",
@@ -77,7 +89,19 @@ const publications = [
     authors:
       "Huang, Y.*; Feng, J.*; Xu, J.; Dong, L.; Su, W.; Li, B.; Witwer, K. W.; Zheng, L.",
     citation: "Aging Cell, 2025 Jan; 24(1): e14356",
-    url: "https://onlinelibrary.wiley.com/doi/10.1111/acel.14356",
+    url: "https://onlinelibrary.wiley.com/doi/10.1111/acel.14356
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        ",
   },
   {
     journal: "Journal of Extracellular Biology",
@@ -87,7 +111,19 @@ const publications = [
     authors:
       "Sagar, R.*; Huang, Y.*; Dong, D.; Boyd, R. J.; Ahmed, W.; Witwer, K. W.; Mahairaki, V.",
     citation: "Journal of Extracellular Biology, 2025, 4(8), e70074",
-    url: "https://isevjournals.onlinelibrary.wiley.com/doi/10.1002/jex2.70074",
+    url: "https://isevjournals.onlinelibrary.wiley.com/doi/10.1002/jex2.70074
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        ",
   },
   {
     journal: "The Journal of Infectious Diseases",
@@ -97,7 +133,19 @@ const publications = [
     authors:
       "Huang, Y.; Abdelgawad, A.; Turchinovich, A.; Queen, S.; Abreu, C. M.; Zhu, X.; Batish, M.; Zheng, L.; Witwer, K. W.",
     citation: "The Journal of Infectious Diseases, 2024, 229(5): 1295–1305",
-    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11095537/",
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11095537
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /",
   },
   {
     journal: "Interdisciplinary Medicine",
@@ -107,7 +155,19 @@ const publications = [
     authors:
       "Huang, Y.*; Arab, T.*; Russell, A. E.; Mallick, E. R.; Nagaraj, R.; Gizzie, E.; Redding, J.; Troncoso, J. C.; Pletniková, O.; Turchinovich, A.; Routenberg, D. A.; Witwer, K. W.",
     citation: "Interdisciplinary Medicine, 2023, 1(4), e20230016",
-    url: "https://onlinelibrary.wiley.com/doi/10.1002/inmd.20230016",
+    url: "https://onlinelibrary.wiley.com/doi/10.1002/inmd.20230016
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        ",
   },
 ];
 
@@ -116,17 +176,17 @@ const piProfile = {
   role: "Principal Investigator",
   photo: `${import.meta.env.BASE_URL}images/pi.jpg`,
   summary:
-    "Dr. Yiyao Huang leads a translational extracellular vesicle biology lab focused on EV-associated non-coding RNAs, liquid biopsy, neurodegenerative diseases, and HIV-associated EV biology.",
+    "Dr. Yiyao Huang leads a young and growing translational extracellular vesicle biology lab. The lab focuses on EV-based liquid biopsy, EV-associated non-coding RNAs, neurodegenerative diseases, and HIV-associated EV biology.",
   training: [
     "MD, PhD, Southern Medical University",
     "Postdoctoral training, Johns Hopkins University School of Medicine",
-    "Research experience in extracellular vesicles, CNS biomarkers, EV RNA biology, and infection-associated EV remodeling",
+    "Research experience in extracellular vesicles, tissue-derived EVs, CNS disease biomarkers, RNA biology,
   ],
   appointments: [
     "Associate Professor, Zhongshan School of Medicine, Sun Yat-sen University",
     "Member-at-Large, International Society for Extracellular Vesicles",
     "Member, ISEV Solid Tissue EVs Task Force",
-    "Secretary, Chinese Society for Extracellular Vesicles",
+    "Early Career Member and Secretary, Chinese Society for Extracellular Vesicles",
   ],
 };
 const team = [
@@ -150,19 +210,19 @@ const team = [
 const openings = [
   {
     title: "Postdoctoral Fellows",
-    text: "We welcome applicants with training in extracellular vesicles, neurodegeneration, RNA biology, virology, bioinformatics, or related biomedical fields.",
+    text: "We welcome applicants who are excited to build new research directions with us in EV biology, RNA biology, or neurodegeneration.",
   },
   {
     title: "Research Assistants",
-    text: "Candidates with experience in multi-omics analysis, coding, molecular biology, or experimental EV research are encouraged to contact us.",
+    text: "Candidates with experience in multi-omics analysis, coding, or bioinformatics are encouraged to contact us.",
   },
   {
     title: "PhD Students",
-    text: "Prospective PhD students interested in EV biology, liquid biopsy, neurodegenerative diseases, and HIV-related research are welcome to reach out.",
+    text: "Prospective PhD students interested in EVs, liquid biopsy, neurodegenerative diseases, HIV, RNA biology, or data-driven biology are welcome to reach out.",
   },
   {
     title: "Master’s Students",
-    text: "We welcome motivated Master’s students seeking rigorous training in molecular biology, EV methods, bioinformatics, and translational biomedical research.",
+    text: "We welcome motivated Master’s students who are curious, careful, and interested in learning experimental or computational approaches in EV research.",
   },
 ];
 
@@ -274,98 +334,30 @@ const researchStyles = [
 
 function ResearchHeaderVisual({ index }) {
   const style = researchStyles[index] || researchStyles[0];
+  const labels = ["RNA cargo", "EV subtypes", "NDD biomarkers", "HIV & EVs"];
 
   return (
-    <div
-      className={`relative mb-6 h-28 overflow-hidden rounded-3xl bg-gradient-to-br ${style.visual}`}
-    >
-      <div className="absolute -right-6 -top-8 h-28 w-28 rounded-full bg-white/30" />
-      <div className="absolute -bottom-8 left-6 h-24 w-24 rounded-full bg-white/25" />
-      <div className="absolute left-6 top-6 grid h-14 w-14 place-items-center rounded-2xl bg-white/80 text-slate-800 shadow-sm">
+    <div className={`relative mb-6 h-28 overflow-hidden rounded-3xl bg-gradient-to-br ${style.visual}`}>
+      <div className="absolute inset-0 bg-white/5" />
+      <div className="absolute -right-10 -top-12 h-32 w-32 rounded-full bg-white/25" />
+      <div className="absolute -bottom-10 left-10 h-28 w-28 rounded-full bg-white/20" />
+
+      <div className="absolute left-6 top-6 grid h-16 w-16 place-items-center rounded-3xl bg-white/85 text-slate-800 shadow-sm">
         <ResearchIcon index={index} />
       </div>
-      <div className="absolute bottom-5 right-6 flex items-center gap-2">
-        <span className="h-3 w-3 rounded-full bg-white/80" />
-        <span className="h-5 w-5 rounded-full border-2 border-white/80 bg-white/20" />
-        <span className="h-8 w-8 rounded-full border-2 border-white/70 bg-white/10" />
+
+      <div className="absolute bottom-6 left-28">
+        <p className="text-sm font-semibold text-white drop-shadow-sm">{labels[index]}</p>
+        <div className="mt-2 flex gap-2">
+          <span className="h-2.5 w-2.5 rounded-full bg-white/90" />
+          <span className="h-2.5 w-6 rounded-full bg-white/60" />
+          <span className="h-2.5 w-10 rounded-full bg-white/35" />
+        </div>
       </div>
 
-      {index === 0 && (
-        <svg
-          className="absolute bottom-5 left-24 h-12 w-28"
-          viewBox="0 0 120 50"
-          fill="none"
-        >
-          <path
-            d="M5 20C20 5 35 35 50 20C65 5 80 35 95 20C105 10 112 15 116 20"
-            stroke="white"
-            strokeWidth="4"
-            strokeLinecap="round"
-            opacity="0.9"
-          />
-          <path
-            d="M10 36C25 22 40 48 55 34C70 20 85 48 110 32"
-            stroke="white"
-            strokeWidth="3"
-            strokeLinecap="round"
-            opacity="0.55"
-          />
-        </svg>
-      )}
-
-      {index === 1 && (
-        <div className="absolute bottom-6 left-24 grid grid-cols-3 gap-2">
-          {[0, 1, 2, 3, 4, 5].map((item) => (
-            <span
-              key={item}
-              className="h-4 w-4 rounded-full border border-white/80 bg-white/30"
-            />
-          ))}
-        </div>
-      )}
-
-      {index === 2 && (
-        <svg
-          className="absolute bottom-4 left-24 h-16 w-28"
-          viewBox="0 0 120 70"
-          fill="none"
-        >
-          <path
-            d="M35 55C18 55 12 40 18 28C22 19 31 18 36 22C38 12 47 8 56 12C61 14 65 18 68 24C73 17 84 16 93 23C103 31 101 50 86 55H35Z"
-            fill="white"
-            opacity="0.75"
-          />
-          <path
-            d="M45 18C40 30 42 43 50 55M63 16C58 31 59 44 64 56M80 22C74 32 75 45 82 55"
-            stroke="#065F46"
-            strokeWidth="2"
-            opacity="0.7"
-            strokeLinecap="round"
-          />
-        </svg>
-      )}
-
-      {index === 3 && (
-        <div className="absolute bottom-5 left-24 flex items-center gap-3">
-          <HivIcon className="h-14 w-14 text-white/80" />
-          <svg className="h-10 w-20" viewBox="0 0 90 45" fill="none">
-            <path
-              d="M5 15C18 3 28 27 40 15C52 3 62 27 85 13"
-              stroke="white"
-              strokeWidth="3"
-              strokeLinecap="round"
-              opacity="0.9"
-            />
-            <path
-              d="M5 32C18 20 28 44 40 32C52 20 62 44 85 30"
-              stroke="white"
-              strokeWidth="3"
-              strokeLinecap="round"
-              opacity="0.6"
-            />
-          </svg>
-        </div>
-      )}
+      <div className="absolute right-7 bottom-6 grid h-14 w-14 place-items-center rounded-full border-2 border-white/70 bg-white/15">
+        <div className="h-6 w-6 rounded-full border-2 border-white/80 bg-white/20" />
+      </div>
     </div>
   );
 }
@@ -373,116 +365,57 @@ function ResearchHeaderVisual({ index }) {
 function CosmicEvArtwork() {
   return (
     <div className="relative h-[460px] w-full max-w-lg overflow-hidden rounded-[2rem] border border-white/20 bg-white/10 p-5 shadow-2xl backdrop-blur">
-      <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-slate-950 via-indigo-950 to-cyan-950" />
-      <div className="absolute -left-10 top-10 h-40 w-40 rounded-full bg-fuchsia-500/20 blur-3xl" />
-      <div className="absolute right-0 top-0 h-48 w-48 rounded-full bg-cyan-400/20 blur-3xl" />
-      <div className="absolute bottom-0 left-1/3 h-52 w-52 rounded-full bg-violet-500/20 blur-3xl" />
+      <div className="absolute inset-0 rounded-[2rem] bg-[radial-gradient(circle_at_50%_45%,rgba(34,211,238,0.30),rgba(15,23,42,0.95)_45%,rgba(2,6,23,1)_100%)]" />
 
-      <div className="absolute left-10 top-10 h-1.5 w-1.5 rounded-full bg-white/80" />
-      <div className="absolute left-20 top-28 h-1 w-1 rounded-full bg-cyan-200" />
-      <div className="absolute right-16 top-20 h-1.5 w-1.5 rounded-full bg-fuchsia-200" />
-      <div className="absolute right-24 top-36 h-1 w-1 rounded-full bg-white/70" />
-      <div className="absolute left-24 bottom-24 h-1.5 w-1.5 rounded-full bg-violet-200" />
-      <div className="absolute right-10 bottom-20 h-1 w-1 rounded-full bg-cyan-100" />
-      <div className="absolute right-32 bottom-10 h-1.5 w-1.5 rounded-full bg-white/70" />
+      <div className="absolute left-1/2 top-1/2 h-[330px] w-[330px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan-200/15" />
+      <div className="absolute left-1/2 top-1/2 h-[245px] w-[245px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-violet-200/15" />
+      <div className="absolute left-1/2 top-1/2 h-[165px] w-[165px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-fuchsia-200/15" />
 
-      <div className="absolute left-1/2 top-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan-300/20" />
-      <div className="absolute left-1/2 top-1/2 h-[230px] w-[230px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-fuchsia-300/20" />
-      <div className="absolute left-1/2 top-1/2 h-[170px] w-[170px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-violet-300/20" />
+      <div className="absolute left-[18%] top-[18%] h-1.5 w-1.5 rounded-full bg-white/80" />
+      <div className="absolute right-[20%] top-[22%] h-1 w-1 rounded-full bg-cyan-200" />
+      <div className="absolute left-[30%] bottom-[18%] h-1 w-1 rounded-full bg-violet-200" />
+      <div className="absolute right-[26%] bottom-[24%] h-1.5 w-1.5 rounded-full bg-white/70" />
 
-      <div className="absolute left-1/2 top-1/2 flex h-36 w-36 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-[10px] border-cyan-300 bg-white/95 shadow-[0_0_40px_rgba(34,211,238,0.25)]">
-        <div className="relative h-20 w-20 rounded-full bg-gradient-to-br from-cyan-100 via-violet-100 to-fuchsia-100">
-          <svg
-            viewBox="0 0 100 100"
-            className="absolute inset-0 h-full w-full"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+      <div className="absolute left-1/2 top-1/2 grid h-40 w-40 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-[10px] border-cyan-200/80 bg-white shadow-[0_0_60px_rgba(34,211,238,0.35)]">
+        <div className="relative h-24 w-24 rounded-full bg-gradient-to-br from-cyan-50 via-violet-50 to-fuchsia-50">
+          <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full" fill="none">
             <path
-              d="M18 58C30 35 44 72 55 48C62 34 71 45 82 40"
+              d="M18 55C30 30 45 70 58 45C66 30 75 46 84 38"
               stroke="#7C3AED"
-              strokeWidth="3"
+              strokeWidth="3.5"
               strokeLinecap="round"
             />
             <path
-              d="M15 43C28 50 36 26 48 40C61 55 68 30 84 55"
+              d="M20 40C34 54 45 25 58 42C70 58 76 31 84 52"
               stroke="#06B6D4"
-              strokeWidth="3"
+              strokeWidth="3.5"
               strokeLinecap="round"
             />
-            <circle cx="28" cy="28" r="4" fill="#EC4899" />
-            <circle cx="70" cy="68" r="5" fill="#14B8A6" />
-            <circle cx="63" cy="30" r="3.5" fill="#F59E0B" />
+            <circle cx="30" cy="28" r="4" fill="#EC4899" />
+            <circle cx="68" cy="68" r="5" fill="#14B8A6" />
+            <circle cx="66" cy="28" r="3.5" fill="#F59E0B" />
           </svg>
         </div>
       </div>
 
-      <div className="absolute left-8 top-16 rounded-3xl border border-violet-300/20 bg-violet-400/10 px-4 py-3 backdrop-blur-sm">
-        <div className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-violet-100">
-          Brain
-        </div>
-        <svg viewBox="0 0 120 80" className="h-16 w-24" fill="none">
-          <path
-            d="M35 60C18 60 12 43 17 31C20 24 27 20 34 21C35 13 42 8 50 8C58 8 64 12 68 18C72 13 78 10 85 11C96 12 104 21 104 33C104 46 95 56 83 58H35Z"
-            fill="#F9A8D4"
-            stroke="#F472B6"
-            strokeWidth="2.5"
-          />
-          <path
-            d="M43 18C39 26 39 40 45 58"
-            stroke="#EC4899"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-          <path
-            d="M60 14C55 24 55 39 60 58"
-            stroke="#EC4899"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-          <path
-            d="M77 18C72 28 72 42 76 56"
-            stroke="#EC4899"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-        </svg>
+      <div className="absolute left-[17%] top-[34%] rounded-2xl border border-white/10 bg-white/10 px-4 py-3 text-white backdrop-blur">
+        <Brain className="mb-2 h-7 w-7 text-violet-200" />
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-100">Brain</p>
       </div>
 
-      <div className="absolute right-8 top-16 rounded-3xl border border-amber-300/20 bg-amber-400/10 px-4 py-3 backdrop-blur-sm">
-        <div className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-amber-100">
-          RNA
-        </div>
-        <svg viewBox="0 0 120 80" className="h-16 w-24" fill="none">
-          <path
-            d="M10 20C25 5 35 35 50 20C65 5 75 35 90 20C100 10 105 15 110 20"
-            stroke="#F59E0B"
-            strokeWidth="3"
-            strokeLinecap="round"
-          />
-          <path
-            d="M10 55C25 40 35 70 50 55C65 40 75 70 90 55C100 45 105 50 110 55"
-            stroke="#FCD34D"
-            strokeWidth="3"
-            strokeLinecap="round"
-          />
-          <circle cx="22" cy="22" r="3" fill="#FDE68A" />
-          <circle cx="52" cy="56" r="3" fill="#FBBF24" />
-          <circle cx="83" cy="21" r="3" fill="#F59E0B" />
-        </svg>
+      <div className="absolute right-[14%] top-[34%] rounded-2xl border border-white/10 bg-white/10 px-4 py-3 text-white backdrop-blur">
+        <Dna className="mb-2 h-7 w-7 text-amber-200" />
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-100">RNA</p>
       </div>
 
-      <div className="absolute left-10 bottom-12 rounded-3xl border border-rose-300/20 bg-rose-400/10 px-4 py-3 backdrop-blur-sm">
-        <div className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-rose-100">
-          Virus
-        </div>
-        <HivIcon className="h-16 w-16 text-rose-300" />
+      <div className="absolute bottom-[18%] left-1/2 -translate-x-1/2 rounded-2xl border border-white/10 bg-white/10 px-4 py-3 text-white backdrop-blur">
+        <HivIcon className="mx-auto mb-2 h-8 w-8 text-rose-200" />
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-rose-100">Virus</p>
       </div>
 
-      <div className="absolute left-[44%] top-[24%] h-4 w-4 rounded-full border-2 border-cyan-300 bg-cyan-200/20" />
-      <div className="absolute left-[68%] top-[48%] h-3 w-3 rounded-full border-2 border-fuchsia-300 bg-fuchsia-200/20" />
-      <div className="absolute left-[28%] top-[55%] h-5 w-5 rounded-full border-2 border-violet-300 bg-violet-200/20" />
-      <div className="absolute left-[58%] top-[72%] h-4 w-4 rounded-full border-2 border-amber-300 bg-amber-200/20" />
+      <div className="absolute left-[39%] top-[23%] h-4 w-4 rounded-full border-2 border-cyan-200 bg-cyan-200/20" />
+      <div className="absolute right-[32%] top-[58%] h-3 w-3 rounded-full border-2 border-fuchsia-200 bg-fuchsia-200/20" />
+      <div className="absolute left-[29%] bottom-[34%] h-5 w-5 rounded-full border-2 border-violet-200 bg-violet-200/20" />
     </div>
   );
 }
@@ -582,18 +515,17 @@ export default function App() {
             </div>
             <div className="space-y-5 text-lg leading-8 text-slate-700">
               <p>
-                The Yiyao Huang Lab at Zhongshan School of Medicine, Sun Yat-sen University focuses on
-                extracellular vesicles, non-coding RNAs, and liquid biopsy. We study how EVs carry
-                molecular information from tissues and cells into peripheral biofluids, and how these
-                signals can be used to understand disease mechanisms and develop more interpretable
-                biomarkers.
+  The Yiyao Huang Lab is a young and growing research group at Zhongshan School of Medicine (Shenzhen),
+  Sun Yat-sen University. We study extracellular vesicles, non-coding RNAs, and liquid biopsy
+  to understand how molecular signals move from tissues and cells into
+  peripheral biofluids.
               </p>
               <p>
-                Our work centers on neurodegenerative diseases, especially Alzheimer’s disease and
-                Parkinson’s disease, as well as HIV-associated EV biology. By integrating brain tissue EV
-                profiling, plasma EV analysis, EV subtyping, source tracing, RNA biology, multi-omics,
-                and functional studies, we aim to connect molecular mechanisms with clinically accessible
-                readouts.
+  We are especially interested in neurodegenerative diseases, including Alzheimer’s disease
+  and Parkinson’s disease, as well as HIV-associated EV biology. As a new lab, we value
+  thoughtful questions, rigorous experiments, transparent data analysis, and open discussion.
+  We welcome trainees and collaborators who bring fresh ideas and are excited to build new
+  directions together.
               </p>
             </div>
           </div>
@@ -770,8 +702,9 @@ export default function App() {
                 We are recruiting motivated trainees and early-career researchers.
               </h2>
               <p className="mt-5 leading-7 text-slate-600">
-                We welcome applicants interested in extracellular vesicles, liquid biopsy,
-                neurodegenerative diseases, RNA biology, bioinformatics, and HIV-related research.
+              As a young and growing lab, we welcome people who are curious, careful, and open to
+new ideas. Applicants with interests in extracellular vesicles, liquid biopsy,
+or bioinformatics are encouraged to contact us.
               </p>
               <a
                 href="mailto:huangyy639@mail.sysu.edu.cn"
