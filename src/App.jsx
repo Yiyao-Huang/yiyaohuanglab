@@ -170,7 +170,7 @@ const activities = [
         alt: "Yiyao Huang with researchers at the Kunming Institute of Zoology",
       },
       {
-        src: `${import.meta.env.BASE_URL}images/activities/kunming-primate-research-facility.jpg?v=20260918`,
+        src: `${import.meta.env.BASE_URL}images/activities/kunming-primate-research-facility-fixed.jpg`,
         alt: "Visit to the non-human primate research facility in Kunming",
       },
     ],
