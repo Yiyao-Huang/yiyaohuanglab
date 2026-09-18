@@ -155,7 +155,7 @@ const team = [
       "BSc: Kangda College of Nanjing Medical University",
       "MSc: Guilin Medical University",
     ],
-    photo: `${import.meta.env.BASE_URL}images/yu-sha.jpg`,
+    photo: `${import.meta.env.BASE_URL}images/yu-sha.jpg?v=20260918`,
   },
 ];
 
@@ -166,11 +166,11 @@ const activities = [
     text: "Yiyao Huang visited the Kunming Institute of Zoology, Chinese Academy of Sciences, where she delivered an invited seminar and met with principal investigators Xin-Tian Hu, Christoph W. Turck, Tianzhang Song, and colleagues. Their discussions explored opportunities to apply extracellular vesicle research to non-human primate models and develop future collaborations.",
     images: [
       {
-        src: `${import.meta.env.BASE_URL}images/activities/kunming-institute-of-zoology-visit.jpg`,
+        src: `${import.meta.env.BASE_URL}images/activities/kunming-institute-of-zoology-visit.jpg?v=20260918`,
         alt: "Yiyao Huang with researchers at the Kunming Institute of Zoology",
       },
       {
-        src: `${import.meta.env.BASE_URL}images/activities/kunming-primate-research-facility.jpg`,
+        src: `${import.meta.env.BASE_URL}images/activities/kunming-primate-research-facility.jpg?v=20260918`,
         alt: "Visit to the non-human primate research facility in Kunming",
       },
     ],
@@ -181,11 +181,11 @@ const activities = [
     text: "Yiyao Huang served on the International Organizing Committee (IOC) for the ISEV workshop “Bacterial and Viral Vesicles: Biogenesis, Communication, and Translational Application” at Dali University. She contributed to the organization of the meeting and moderated scientific sessions during the two-day program.",
     images: [
       {
-        src: `${import.meta.env.BASE_URL}images/activities/isev-dali-workshop-group.jpg`,
+        src: `${import.meta.env.BASE_URL}images/activities/isev-dali-workshop-group.jpg?v=20260918`,
         alt: "Participants at the 2026 ISEV Workshop in Dali",
       },
       {
-        src: `${import.meta.env.BASE_URL}images/activities/isev-dali-workshop-ioc.jpg`,
+        src: `${import.meta.env.BASE_URL}images/activities/isev-dali-workshop-ioc.jpg?v=20260918`,
         alt: "Organizers and participants during the ISEV Workshop in Dali",
       },
     ],
@@ -196,11 +196,11 @@ const activities = [
     text: "Dr. Zach Troyer from Johns Hopkins University visited the Yiyao Huang Lab, toured the laboratory, and joined the group for scientific discussions and an exchange of research ideas.",
     images: [
       {
-        src: `${import.meta.env.BASE_URL}images/activities/zach-troyer-lab-discussion.jpg`,
+        src: `${import.meta.env.BASE_URL}images/activities/zach-troyer-lab-discussion.jpg?v=20260918`,
         alt: "Scientific discussion with Dr. Zach Troyer during his lab visit",
       },
       {
-        src: `${import.meta.env.BASE_URL}images/activities/zach-troyer-lab-visit.jpg`,
+        src: `${import.meta.env.BASE_URL}images/activities/zach-troyer-lab-visit.jpg?v=20260918`,
         alt: "Dr. Zach Troyer with members of the Yiyao Huang Lab",
       },
     ],
@@ -211,11 +211,11 @@ const activities = [
     text: "At the invitation of Professor Nguyen Thanh Liem, Director of the Vinmec Research Institute of Stem Cell and Gene Technology at VinUniversity, Yiyao Huang attended “Exosomes in Diagnostics, Regeneration and Aesthetic Medicine” in Hanoi, Vietnam, and delivered an invited scientific presentation.",
     images: [
       {
-        src: `${import.meta.env.BASE_URL}images/activities/vinuni-exosome-conference-group.jpg`,
+        src: `${import.meta.env.BASE_URL}images/activities/vinuni-exosome-conference-group.jpg?v=20260918`,
         alt: "Participants at the Exosomes in Diagnostics, Regeneration and Aesthetic Medicine conference",
       },
       {
-        src: `${import.meta.env.BASE_URL}images/activities/yiyao-huang-vinuni-presentation.jpg`,
+        src: `${import.meta.env.BASE_URL}images/activities/yiyao-huang-vinuni-presentation.jpg?v=20260918`,
         alt: "Yiyao Huang delivering an invited presentation at VinUniversity",
       },
     ],
@@ -226,11 +226,11 @@ const activities = [
     text: "Professor Andreas Möller from The Chinese University of Hong Kong visited the Yiyao Huang Lab at Sun Yat-sen University. During the visit, he toured the laboratory and exchanged ideas with colleagues on extracellular vesicle research and opportunities for future collaboration.",
     images: [
       {
-        src: `${import.meta.env.BASE_URL}images/activities/andreas-moller-lab-tour.jpg`,
+        src: `${import.meta.env.BASE_URL}images/activities/andreas-moller-lab-tour.jpg?v=20260918`,
         alt: "Professor Andreas Möller touring a laboratory at Sun Yat-sen University",
       },
       {
-        src: `${import.meta.env.BASE_URL}images/activities/andreas-moller-sysu-visit.jpg`,
+        src: `${import.meta.env.BASE_URL}images/activities/andreas-moller-sysu-visit.jpg?v=20260918`,
         alt: "Professor Andreas Möller and Yiyao Huang at Sun Yat-sen University",
       },
     ],
