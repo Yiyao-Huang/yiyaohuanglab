@@ -1,7 +1,9 @@
+/opt/homebrew/Library/Homebrew/cmd/shellenv.sh: line 18: /bin/ps: Operation not permitted
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
+  ArrowLeft,
   Mail,
   MapPin,
   Users,
@@ -14,6 +16,7 @@ import {
   FlaskConical,
   UserPlus,
   BriefcaseBusiness,
+  CalendarDays,
 } from "lucide-react";
 
 function cn(...classes) {
@@ -145,6 +148,93 @@ const team = [
     role: "Master’s Student",
     note: ["BSc: Jinan University"],
     photo: `${import.meta.env.BASE_URL}images/ningyu-hu.jpg`,
+  },
+  {
+    name: "沙雨 / Yu Sha",
+    role: "PhD Student",
+    note: [
+      "BSc: Kangda College of Nanjing Medical University",
+      "MSc: Guilin Medical University",
+    ],
+    photo: `${import.meta.env.BASE_URL}images/yu-sha.jpg`,
+  },
+];
+
+const activities = [
+  {
+    date: "September 14, 2026",
+    title: "Invited visit to the Kunming Institute of Zoology",
+    text: "Yiyao Huang visited the Kunming Institute of Zoology, Chinese Academy of Sciences, where she delivered an invited seminar and met with principal investigators Xin-Tian Hu, Christoph W. Turck, Tianzhang Song, and colleagues. Their discussions explored opportunities to apply extracellular vesicle research to non-human primate models and develop future collaborations.",
+    images: [
+      {
+        src: `${import.meta.env.BASE_URL}images/activities/kunming-institute-of-zoology-visit.jpg`,
+        alt: "Yiyao Huang with researchers at the Kunming Institute of Zoology",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}images/activities/kunming-primate-research-facility.jpg`,
+        alt: "Visit to the non-human primate research facility in Kunming",
+      },
+    ],
+  },
+  {
+    date: "September 11–12, 2026",
+    title: "ISEV Workshop in Dali",
+    text: "Yiyao Huang served on the International Organizing Committee (IOC) for the ISEV workshop “Bacterial and Viral Vesicles: Biogenesis, Communication, and Translational Application” at Dali University. She contributed to the organization of the meeting and moderated scientific sessions during the two-day program.",
+    images: [
+      {
+        src: `${import.meta.env.BASE_URL}images/activities/isev-dali-workshop-group.jpg`,
+        alt: "Participants at the 2026 ISEV Workshop in Dali",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}images/activities/isev-dali-workshop-ioc.jpg`,
+        alt: "Organizers and participants during the ISEV Workshop in Dali",
+      },
+    ],
+  },
+  {
+    date: "September 9, 2026",
+    title: "Visit from Dr. Zach Troyer",
+    text: "Dr. Zach Troyer from Johns Hopkins University visited the Yiyao Huang Lab, toured the laboratory, and joined the group for scientific discussions and an exchange of research ideas.",
+    images: [
+      {
+        src: `${import.meta.env.BASE_URL}images/activities/zach-troyer-lab-discussion.jpg`,
+        alt: "Scientific discussion with Dr. Zach Troyer during his lab visit",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}images/activities/zach-troyer-lab-visit.jpg`,
+        alt: "Dr. Zach Troyer with members of the Yiyao Huang Lab",
+      },
+    ],
+  },
+  {
+    date: "June 23, 2026",
+    title: "Invited presentation at an exosome conference in Hanoi",
+    text: "At the invitation of Professor Nguyen Thanh Liem, Director of the Vinmec Research Institute of Stem Cell and Gene Technology at VinUniversity, Yiyao Huang attended “Exosomes in Diagnostics, Regeneration and Aesthetic Medicine” in Hanoi, Vietnam, and delivered an invited scientific presentation.",
+    images: [
+      {
+        src: `${import.meta.env.BASE_URL}images/activities/vinuni-exosome-conference-group.jpg`,
+        alt: "Participants at the Exosomes in Diagnostics, Regeneration and Aesthetic Medicine conference",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}images/activities/yiyao-huang-vinuni-presentation.jpg`,
+        alt: "Yiyao Huang delivering an invited presentation at VinUniversity",
+      },
+    ],
+  },
+  {
+    date: "June 16, 2026",
+    title: "Visit from Professor Andreas Möller",
+    text: "Professor Andreas Möller from The Chinese University of Hong Kong visited the Yiyao Huang Lab at Sun Yat-sen University. During the visit, he toured the laboratory and exchanged ideas with colleagues on extracellular vesicle research and opportunities for future collaboration.",
+    images: [
+      {
+        src: `${import.meta.env.BASE_URL}images/activities/andreas-moller-lab-tour.jpg`,
+        alt: "Professor Andreas Möller touring a laboratory at Sun Yat-sen University",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}images/activities/andreas-moller-sysu-visit.jpg`,
+        alt: "Professor Andreas Möller and Yiyao Huang at Sun Yat-sen University",
+      },
+    ],
   },
 ];
 
@@ -396,7 +486,91 @@ function CosmicEvArtwork() {
     </div>
   );
 }
+
+function NewsPage() {
+  return (
+    <div className="min-h-screen bg-slate-50 text-slate-900">
+      <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+          <div>
+            <p className="text-lg font-semibold tracking-tight">Yiyao Huang Lab</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-slate-500">
+              News & Activities
+            </p>
+          </div>
+          <a
+            href={import.meta.env.BASE_URL}
+            className="inline-flex items-center text-sm font-semibold text-slate-700 hover:text-slate-950"
+          >
+            <ArrowLeft className="mr-2 h-4 w-4" /> Back to home
+          </a>
+        </div>
+      </header>
+
+      <main>
+        <section className="border-b border-slate-200 bg-white py-16">
+          <div className="mx-auto max-w-7xl px-6">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">
+              Lab news & activities
+            </p>
+            <h1 className="mt-3 max-w-3xl text-4xl font-semibold tracking-tight md:text-5xl">
+              Visits, meetings, and moments from the lab
+            </h1>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-6 py-16">
+          <div className="space-y-16">
+            {activities.map((activity) => (
+              <article
+                key={`${activity.date}-${activity.title}`}
+                className="grid gap-8 border-t border-slate-200 pt-8 lg:grid-cols-[0.7fr_1.3fr]"
+              >
+                <div>
+                  <div className="flex items-center gap-2 text-sm font-semibold text-blue-700">
+                    <CalendarDays className="h-4 w-4" />
+                    <time>{activity.date}</time>
+                  </div>
+                  <h2 className="mt-4 text-2xl font-semibold tracking-tight text-slate-950">
+                    {activity.title}
+                  </h2>
+                  <p className="mt-4 leading-7 text-slate-600">{activity.text}</p>
+                </div>
+
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {activity.images.map((image) => (
+                    <figure
+                      key={image.src}
+                      className="overflow-hidden rounded-lg bg-slate-100"
+                    >
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        loading="lazy"
+                        className="aspect-[4/3] w-full object-cover"
+                      />
+                    </figure>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      </main>
+
+      <footer className="border-t border-slate-200 bg-white px-6 py-8 text-center text-sm text-slate-500">
+        © 2026 Yiyao Huang Lab. Zhongshan School of Medicine (Shenzhen), Sun Yat-sen
+        University. All rights reserved.
+      </footer>
+    </div>
+  );
+}
+
 export default function App() {
+  if (new URLSearchParams(window.location.search).get("page") === "news") {
+    return <NewsPage />;
+  }
+
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
       <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
@@ -415,6 +589,12 @@ export default function App() {
             </a>
             <a href="#people" className="hover:text-slate-950">
               People
+            </a>
+            <a
+              href={`${import.meta.env.BASE_URL}?page=news`}
+              className="hover:text-slate-950"
+            >
+              News
             </a>
             <a href="#publications" className="hover:text-slate-950">
               Publications
@@ -663,6 +843,53 @@ export default function App() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </section>
+
+        <section id="activities" className="bg-white py-20">
+          <div className="mx-auto max-w-7xl px-6">
+            <div className="mb-10 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-700">
+                  Lab news & activities
+                </p>
+                <h2 className="mt-3 text-4xl font-semibold tracking-tight">
+                  Latest news
+                </h2>
+              </div>
+              <a
+                href={`${import.meta.env.BASE_URL}?page=news`}
+                className="inline-flex w-fit items-center font-semibold text-blue-700 hover:text-blue-900"
+              >
+                View all news <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </div>
+
+            <div className="grid gap-8 md:grid-cols-2">
+              {activities.slice(0, 2).map((activity) => (
+                <article
+                  key={`${activity.date}-${activity.title}`}
+                  className="border-t border-slate-200 pt-6"
+                >
+                  <img
+                    src={activity.images[0].src}
+                    alt={activity.images[0].alt}
+                    loading="lazy"
+                    className="aspect-[16/9] w-full rounded-lg object-cover"
+                  />
+                  <div className="mt-5 flex items-center gap-2 text-sm font-semibold text-blue-700">
+                    <CalendarDays className="h-4 w-4" />
+                    <time>{activity.date}</time>
+                  </div>
+                  <h3 className="mt-3 text-2xl font-semibold tracking-tight text-slate-950">
+                    {activity.title}
+                  </h3>
+                  <p className="mt-3 line-clamp-3 leading-7 text-slate-600">
+                    {activity.text}
+                  </p>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 
